@@ -209,5 +209,12 @@ Destaco que não houveram grandes mudanças nos arquivos `okteto.yml` e `Dockerf
 <br>
 <br>
 <br>
+
+- Aplicação pode ser acessada online, no serviço Okteto através do link [Site](https://web-andersonaoliveira.cloud.okteto.net/)
+<br>
+<br>
+<br>
+
+
 Código inteiramente produzido e escrito por:
 - `Anderson de Aguiar de Oliveira`
