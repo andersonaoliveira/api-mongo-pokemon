@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pokemon API</title>
+    <script src="./aplicacao.js"></script>
+    <script src="./editarAlbum.js"></script>
+    <script src="./routes/index.js"></script>
+</head>
+
+<body>
+<div>
+    <table width="100%">
+    <tr><td colspan="2"><center><h1>SEU ALBUM POKEMON</h1></center></td></tr>
+    <tr><td width="50%">
+    <h2>Consulte o nome do seu pokemon para ver informações dele.</h2>
+    <form id="formulario" method="get" action=".">
+        <input name="pokemon" type="text" id="pokemon" value="" size="40" maxlength="20" onkeypress="doNothing()"/>
+        <input type="button" value="Consultar nome do Pokemon" onclick="createList(pokemon.value)">
+        <br><br>
+        <input type="button" value="ANTERIOR" onclick="previous()"> | <input type="button" value="PRÓXIMO" onclick="next()">
+        <br><br><br><br>
+        <h2>Insira o nome do Album em que deseja salvar o pokemon selecionado.</h2>
+        <input name="collection" type="text" id="collection" value="" size="20" maxlength="10" onkeypress="doNothing()"/>
+        <input type="button" value="Insira o nome do seu Album" onclick="salvarAlbum(collection.value)">
+        <br><br>
+        <input type="button" value="VEJA SEU ÁLBUM" onclick="meuAlbum()"> | <input type="button" value="SALVAR ESTE NO SEU ÁLBUM" onclick="atuaizaAlbumComPokemons()">
+        <br><br>
+        
+    </form>
+    <br><div id="atualAlbum"></div><br>
+    <br><div id="alertError"></div><br>
+        </td>
+        <td width="50%">        
+    <table>
+        <tr><td colspan="5" id=pokemonAtual></td></tr>
+        <tr><td id="atributoHP"></td><td colspan="3" rowspan="3" id="atributoImagem"></td><td id="atributoVelocidade"></td></tr>
+        <tr><td id="atributoAtaque"></td><td id="atributoDefesa"></td></tr>
+        <tr><td id="atributoAtaqueEspecial"></td><td id="atributoDefesaEspecial"></td></tr>
+        <tr><td></td><td id="numeroDoPokemon"></td></tr>
+    </table>
+    </tr></td>
+    </table>
+    <br>
+
+    <table width="100%">
+        <tr><td colspan="5"><h2><center>SEU ALBUM POKEMON</center></h2></td></tr>
+    </table>
+
+    <table>    
+        <div id="tabelaDoAlbum"></div>
+    </table>
+    
+</div>
+</body>
+</html>
